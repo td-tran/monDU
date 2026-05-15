@@ -55,9 +55,9 @@ Ce fichier n'est pas versionné pour des raisons de confidentialité.
 - `cross-ms-marco` : CrossEncoder `cross-encoder/ms-marco-MiniLM-L6-v2`
 
 ## lancer le backend depuis le répertoire monDU
-python -m pip install -r backend/requirements.txt
-python -m uvicorn backend.main:app --reload
-vérifier http://127.0.0.1:8000/health
+- python -m pip install -r backend/requirements.txt
+- python -m uvicorn backend.main:app --reload
+- vérifier http://127.0.0.1:8000/health
 
 ## Lancer le frontend
 - depuis \monDU\frontend
