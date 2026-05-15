@@ -50,9 +50,21 @@ button:hover {
 .result-card h2 {
   margin: 0 0 0.5rem;
 }
-.score {
+.score-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin: 0.75rem 0 0;
-  color: #555;
+  color: #333;
+  font-size: 0.95rem;
+}
+.score-details span {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+.score-details strong {
+  color: #1f78d1;
 }
 #status {
   margin-bottom: 0.75rem;

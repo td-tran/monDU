@@ -17,7 +17,11 @@ function renderResults(data) {
         <h2>${item.title}</h2>
         <p><strong>Université :</strong> ${item.university}</p>
         <p><strong>Lien :</strong> <a href="${item.site}" target="_blank" rel="noreferrer">Voir la formation</a></p>
-        <p class="score">Score : ${item.combined_score.toFixed(3)}</p>
+        <div class="score-details">
+          <span><strong>Lexical :</strong> ${item.lexical_score.toFixed(3)}</span>
+          <span><strong>Sémantique :</strong> ${item.semantic_score.toFixed(3)}</span>
+          <span><strong>Combiné :</strong> ${item.combined_score.toFixed(3)}</span>
+        </div>
       </article>`
     )
     .join("\n");
