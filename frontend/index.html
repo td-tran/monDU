@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moteur de recherche de formations</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Moteur de recherche de formations</h1>
+      <form id="searchForm">
+        <input id="query" type="search" placeholder="Rechercher une formation..." autocomplete="off" required />
+        <select id="reranker" name="reranker">
+          <option value="none">Pas de reranker</option>
+          <option value="hybrid">Reranker hybride (par défaut)</option>
+          <option value="cross-ms-marco">CrossEncoder ms-marco</option>
+        </select>
+        <button type="submit">Chercher</button>
+      </form>
+      <div id="status"></div>
+      <section id="results"></section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
