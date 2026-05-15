@@ -13,8 +13,8 @@
 3. Un reranker trie les résultats sur un score combiné
 
 ## Lancer le backend
-1. Ouvrir un terminal dans `c:\Users\tridu\projets\monDU`
-2. Activer l'environnement virtuel :
+1. Ouvrir un terminal pour aller au répertoir monDU
+2. Activer l'environnement virtuel (si Windows) :
    ```powershell
    venv\Scripts\activate
    ```
@@ -51,11 +51,18 @@ Ce fichier n'est pas versionné pour des raisons de confidentialité.
 
 ## Reranker disponibles
 - `none` : pas de reranker, fusion simple des résultats lexicaux et sémantiques
-- `hybrid` : reranker intégré (TF-IDF + sémantique + overlap) — **recommandé**
+- `hybrid` : reranker intégré (TF-IDF + sémantique + overlap) 
 - `cross-ms-marco` : CrossEncoder `cross-encoder/ms-marco-MiniLM-L6-v2`
 
+## lancer le backend depuis le répertoire monDU
+- python -m pip install -r backend/requirements.txt
+- python -m uvicorn backend.main:app --reload
+- vérifier http://127.0.0.1:8000/health
+
 ## Lancer le frontend
-- Ouvrir `frontend/index.html` dans un navigateur
+- depuis \monDU\frontend
+- python -m http.server 5500
+- http://127.0.0.1:5500/index.html 
 - Le frontend fera des requêtes vers `http://127.0.0.1:8000/search?query=...&reranker=hybrid`
 
 ## Endpoints
